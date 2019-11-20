@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+   <head>
+        
+        <title>All Articles</title>
+        
+       
+    </head>
+    <body>
+        <h1> Welcome to Article List </h1>
+
+        <ul>
+         <% @articles.each do |article| %>
+         <li>
+            <h2> <a href="/article/<%= article.id %>"><%= article.title %></a> </h2>
+         </li>
+         <% end %>
+        </ul>
+        
+        <div> <h1><a href="/article/new">Create New article</a> </h1></div>
+
+    </body>
+</html>
