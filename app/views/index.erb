@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>..::Read the Articles::..</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/articles/new">CREATE ARTICLE</a></li>
+        </ul>
+        <h1>Welcome to Articles</h1>
+        <h2>Here is a list of all articles</h2>
+        <ul>
+            <% Article.all.each do |article| %>
+                <li> <a href="/articles/<%=article.id%>"><%=article.title%></a> </li>
+            <% end %>
+        </ul>
+    </body>
+</html>

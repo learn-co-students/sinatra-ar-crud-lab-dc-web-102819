@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>..::Article Detail::..</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/articles/new">CREATE ARTICLE</a></li>
+        </ul>
+        <h1><%=@article.title%></h1>
+        <p><%=@article.content%></p>
+        <ul>
+            <li><a href="/articles/<%=@article.id%>/edit">Edit</a></li>
+            <form action="/articles/<%=@article.id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+        </ul>
+    </body>
+</html>
